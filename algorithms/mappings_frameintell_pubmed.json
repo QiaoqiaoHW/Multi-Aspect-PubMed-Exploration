@@ -1,0 +1,240 @@
+{
+  "settings": {
+    "analysis": {
+      "filter": {
+        "preserve_original": {
+          "type": "word_delimiter",
+          "preserve_original": "true"
+        }
+      },
+      "analyzer": {
+        "modified_analyzer": {
+          "filter": [
+            "lowercase",
+            "preserve_original"
+          ],
+          "type": "custom",
+          "tokenizer": "standard"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "abstract": {
+        "type": "text",
+        "analyzer": "modified_analyzer"
+      },
+      "articleDate": {
+        "type": "date",
+        "format": "yyyy-MM-dd",
+        "null_value": "1900-01-01"
+      },
+      "authors": {
+        "type": "nested",
+        "properties": {
+          "affiliations": {
+            "type": "nested",
+            "properties": {
+              "institute": {
+                "type": "text",
+                "analyzer": "modified_analyzer"
+              }
+            }
+          },
+          "firstName": {
+            "type": "keyword",
+            "null_value": "NONE"
+          },
+          "lastName": {
+            "type": "keyword",
+            "null_value": "NONE"
+          }
+        }
+      },
+      "chemicals": {
+        "type": "nested",
+        "properties": {
+          "chemicalMeshID": {
+            "type": "keyword",
+            "null_value": "NONE"
+          },
+          "name": {
+            "type": "text",
+            "analyzer": "modified_analyzer"
+          }
+        }
+      },
+      "fullText": {
+        "type": "text",
+        "analyzer": "modified_analyzer"
+      },
+      "fullTextURL": {
+        "type": "keyword",
+        "null_value": "NONE"
+      },
+      "grants": {
+        "type": "nested",
+        "properties": {
+          "acronym": {
+            "type": "keyword",
+            "null_value": "NONE"
+          },
+          "agency": {
+            "type": "keyword",
+            "null_value": "NONE"
+          },
+          "country": {
+            "type": "keyword",
+            "null_value": "NONE"
+          },
+          "grantID": {
+            "type": "keyword",
+            "null_value": "NONE"
+          }
+        }
+      },
+      "history": {
+        "type": "nested",
+        "properties": {
+          "date": {
+            "type": "date",
+            "format": "yyyy-MM-dd",
+            "null_value": "1900-01-01"
+          },
+          "type": {
+            "type": "keyword",
+            "null_value": "NONE"
+          }
+        }
+      },
+      "journalInformation": {
+        "type": "nested",
+        "properties": {
+          "abbreviation": {
+            "type": "text",
+            "analyzer": "modified_analyzer"
+          },
+          "journalIssueInformation": {
+            "type": "nested",
+            "properties": {
+              "issueDate": {
+                "type": "nested",
+                "properties": {
+                  "day": {
+                    "type": "keyword",
+                    "null_value": "NONE"
+                  },
+                  "month": {
+                    "type": "keyword",
+                    "null_value": "NONE"
+                  },
+                  "year": {
+                    "type": "keyword",
+                    "null_value": "NONE"
+                  }
+                }
+              },
+              "issueNumber": {
+                "type": "keyword",
+                "null_value": "NONE"
+              },
+              "medium": {
+                "type": "keyword",
+                "null_value": "NONE"
+              },
+              "volume": {
+                "type": "keyword",
+                "null_value": "NONE"
+              }
+            }
+          },
+          "journalTitle": {
+            "type": "text",
+            "analyzer": "modified_analyzer"
+          }
+        }
+      },
+      "keywords": {
+        "type": "nested",
+        "properties": {
+          "major": {
+            "type": "keyword",
+            "null_value": "NONE"
+          },
+          "name": {
+            "type": "text",
+            "analyzer": "modified_analyzer"
+          }
+        }
+      },
+      "language": {
+        "type": "keyword",
+        "null_value": "NONE"
+      },
+      "meshTerms": {
+        "type": "nested",
+        "properties": {
+          "major": {
+            "type": "keyword",
+            "null_value": "NONE"
+          },
+          "meshID": {
+            "type": "keyword",
+            "null_value": "NONE"
+          },
+          "name": {
+            "type": "text",
+            "analyzer": "modified_analyzer"
+          }
+        }
+      },
+      "nlpProcessedFlag": {
+        "type": "keyword",
+        "null_value": "N"
+      },
+      "otherAbstract": {
+        "type": "text",
+        "analyzer": "modified_analyzer"
+      },
+      "publicationTypes": {
+        "type": "nested",
+        "properties": {
+          "publicationMeshID": {
+            "type": "keyword",
+            "null_value": "NONE"
+          },
+          "publicationName": {
+            "type": "keyword",
+            "null_value": "NONE"
+          },
+          "type": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          }
+        }
+      },
+      "status": {
+        "type": "keyword",
+        "null_value": "NONE"
+      },
+      "title": {
+        "type": "text",
+        "analyzer": "modified_analyzer"
+      },
+      "vectorisedFlag": {
+        "type": "keyword",
+        "null_value": "N"
+      },
+      "vernacularTitle": {
+        "type": "text",
+        "analyzer": "modified_analyzer"
+      }
+    }
+  }
+}

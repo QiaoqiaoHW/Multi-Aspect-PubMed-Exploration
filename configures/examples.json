@@ -1,0 +1,55 @@
+{
+  "example 1":{
+    "origin_index":"frameintell_pubmed",
+    "articleDate":"2019-01-01",
+    "clustering":{
+      "dim_reduction_method":"tsne",
+      "vector":[1.21499,3.88867],
+      "clustering_label":[
+        {
+          "clustering_method":"KMeans",
+          "label":24
+        },
+        {
+          "clustering_method":"DBSCAN",
+          "label":29
+        },
+        {
+          "clustering_method":"HDBSCAN",
+          "label":32
+        }
+      ]
+    },
+    "words":{
+      "words_from":"title",
+      "word_list":["this","is","about","nutrition"]
+    }
+  },
+  "example 2":{
+    "origin_index":"frameintell_pubmed",
+    "articleDate":"2019-12-01",
+    "clustering":{
+      "dim_reduction_method":"umap",
+      "vector":[5.21499,9.88867],
+      "clustering_label":[
+        {
+          "clustering_method":"KMeans",
+          "label":29
+        },
+        {
+          "clustering_method":"DBSCAN",
+          "label":22
+        },
+        {
+          "clustering_method":"HDBSCAN",
+          "label":36
+        }
+      ]
+    },
+    "words":{
+      "words_from":"abstract",
+      "word_list":["what","is","example","nutrition"]
+    }
+  }
+  
+}

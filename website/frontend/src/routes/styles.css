@@ -1,0 +1,104 @@
+/* styles.css */
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.temporal-container,.instruction{
+    display: flex;
+    flex-direction: column;
+}
+.graph-container,.wc-container {
+    display: flex;
+    flex-direction: row;
+}
+.selected-wc{
+    padding: 10px;
+}
+
+.instruction-title{
+    text-align: center;
+}
+
+.form_container{
+    display:flex;
+    justify-content: space-between;
+    width:100%; 
+    text-align:center;
+    background-color: ghostwhite;
+    font-family:Arial, Helvetica, sans-serif;  
+    margin-bottom: 10px;
+}
+
+.left-form,.middle-form,.right-forms {
+    display: flex;
+    flex-direction: row;
+    padding:10px;
+}
+
+input,select{
+    font-size: 20px;
+}
+
+#show, #filter{
+    font-weight: bolder;
+    background-color: #2e78cd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    }
+
+label{
+    text-align:left;
+    padding:10px;
+    font-family:Arial;
+    font-size:20px;
+    font-weight: bolder;
+}
+
+#mode{
+    font-size:15px;
+    font-weight: bolder;
+    color: gray;
+}
+
+.mui-switch {
+    width: 50px;
+    height: 30px;
+    position: relative;
+    border: 1px solid #dfdfdf;
+    background-color: #fdfdfd;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-clip: content-box;
+    display: inline-block;
+    user-select: none;
+    outline: none; 
+}
+.mui-switch:before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); 
+}
+.mui-switch:checked {
+    border-color: #64bd63;
+    box-shadow: #64bd63 0 0 0 16px inset;
+    background-color: #64bd63; 
+}
+.mui-switch:checked:before {
+    left: 20px; 
+} 

@@ -1,0 +1,81 @@
+{
+    "frameintell_clustering_and_words": {
+        "aliases": {},
+        "mappings": {
+            "properties": {
+                "origin_index": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "articleDate": {
+                    "type": "date"
+                },
+                "clustering":{
+                    "properties":{
+                        "dim_reduction_method":{
+                            "type": "text",
+                            "fields": {
+                                "keyword": {
+                                    "type": "keyword",
+                                    "ignore_above": 256
+                                }
+                            }
+                        },
+                        "vector": {
+                            "type": "float"
+                        },
+                        "clustering_label":{
+                            "properties":{
+                                "clustering_method":{
+                                    "type": "text",
+                                    "fields": {
+                                        "keyword": {
+                                            "type": "keyword",
+                                            "ignore_above": 256
+                                        }
+                                    }
+                                },
+                                "label":{
+                                    "type":"int"
+                                }
+                            }
+                        }                        
+                    }
+                },
+                "words":{
+                    "properties":{
+                        "words_from":{ 
+                            "type": "text",
+                            "fields": {
+                                "keyword": {
+                                    "type": "keyword",
+                                    "ignore_above": 256
+                                }
+                            }
+                        },
+                        "word_list":{
+                            "type": "text",
+                            "fields": {
+                                "keyword": {
+                                    "type": "keyword",
+                                    "ignore_above": 256
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+       },
+        "settings": {
+            "index": {
+                "number_of_shards": "1",
+                "number_of_replicas": "1"
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+  "mappings": {
+    "properties": {
+      "origin_index": {
+        "type": "keyword"
+      },
+      "articleDate": {
+        "type": "date",
+        "format": "yyyy-MM-dd"
+      },
+      "reference_text": {
+        "type": "keyword"
+      },
+      "insights": {
+        "type": "nested",
+        "properties": {
+          "dim_reduction_method": {
+            "type": "keyword"
+          },
+          "reduced_dimension": {
+            "type": "float"
+          },
+          "clustering_information": {
+            "type": "nested",
+            "properties": {
+              "clustering_method": {
+                "type": "keyword"
+              },
+              "label": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
