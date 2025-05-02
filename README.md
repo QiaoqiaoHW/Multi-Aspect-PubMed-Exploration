@@ -1,6 +1,4 @@
 # Topic: Multi-Aspect Corpus Exploration
-#### Author: [Qiaowen Hu](mailto:huqiaowen0104@163.com)
-#### Supervisor: Ashish Chouhan
 
 ## Introduction
 With a dataset containing around 18M PubMed abstract, this project aims to provide a pipeline for enabling users to explore the corpus on multiple aspects.
@@ -40,13 +38,13 @@ The project incorporates three core functionalities through a web service. Prima
 
 1. Dowload the project
     ```
-    git clone https://git-dbs.ifi.uni-heidelberg.de/practicals/2023-qiaowen-hu.git
+    git clone https://github.com/QiaoqiaoHW/Multi-Aspect-PubMed-Exploration.git
     ```
 2. Start docker service 
     First, install OpenSearch with Docker Compose.(refer to https://opensearch.org/downloads.html)  
     Then, start the docker service.
     ``` 
-    cd 2023-qiaowen-hu
+    cd Multi-Aspect-PubMed-Exploration
     docker-compose up
     ```
     Open http://localhost:5601 and have a look!
@@ -65,7 +63,7 @@ The project incorporates three core functionalities through a web service. Prima
     ```
 * Install dependencies
     ```
-    cd 2023-qiaowen-hu
+    cd Multi-Aspect-PubMed-Exploration
     pip install -r requirements.txt
     ```
 5. Prepare target data  
